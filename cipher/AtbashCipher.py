@@ -4,8 +4,22 @@ from cipher import ALPHABET
 class AtbashCipher():
     def __init__(self):
         self.alphabet = ALPHABET
-
+   
     def encrypt_decrypt_text(self, text: str) -> str:
+        """
+        Returns the output of using Atbash cipher
+
+        Parameters
+        ----------
+        text: str
+            The input text.
+
+        Returns
+        -------
+        str
+            The Atbash cipher output.
+
+        """
         alphabet_len = len(self.alphabet)
         text = text.upper()
         output_text = []

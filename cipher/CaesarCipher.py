@@ -6,6 +6,24 @@ class CaesarCipher():
         self.alphabet = ALPHABET
 
     def encrypt_decrypt_text(self, text: str, mode: str = "encrypt", key: int = 1) -> str:
+        """
+        Returns the output of using Caesar cipher
+
+        Parameters
+        ----------
+        text: str
+            The input text.
+        mode: str
+            The mode of Caesar cipher, whether 'encrypt or decrypt'.
+        key: int
+            The cipher key to use.
+
+        Returns
+        -------
+        str
+            The Caesar cipher output.
+
+        """
         alphabet_len = len(self.alphabet)
         text = text.upper()
         output_text = []
