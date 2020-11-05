@@ -1,3 +1,9 @@
+from string import ascii_uppercase 
+from typing import List
 from .CaesarCipher import CaesarCipher
 from .AtbashCipher import AtbashCipher
-from .alphabet import get_alphabet
+
+
+def get_alphabet() -> List:
+    letters= list(ascii_uppercase)
+    return letters
