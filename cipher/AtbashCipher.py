@@ -1,6 +1,9 @@
+from cipher import ALPHABET
+
+
 class AtbashCipher():
-    def __init__(self, alphabet: list):
-        self.alphabet = alphabet
+    def __init__(self):
+        self.alphabet = ALPHABET
 
     def encrypt_decrypt_text(self, text: str) -> str:
         alphabet_len = len(self.alphabet)
