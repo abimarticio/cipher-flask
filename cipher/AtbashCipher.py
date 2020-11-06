@@ -5,6 +5,9 @@ class AtbashCipher():
     def __init__(self):
         self.alphabet = ALPHABET
    
+    def __call__(self, text: str) -> str:
+        return self.encrypt_decrypt_text(text)
+
     def encrypt_decrypt_text(self, text: str) -> str:
         """
         Returns the output of using Atbash cipher
