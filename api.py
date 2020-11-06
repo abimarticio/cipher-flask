@@ -10,5 +10,11 @@ def atbash_encrypt():
     encrypted_text = AtbashCipher()
     return f"text: {text} - encrypted text: {encrypted_text(text)}"
 
+@app.route("/atbash/decrypt", methods=["GET"])
+def atbash_decrypt():
+    text = request.args.get("text", default=None)
+    decrypted_text = AtbashCipher()
+    return f"text: {text} - decrypted text: {decrypted_text(text)}"
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
