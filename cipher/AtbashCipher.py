@@ -1,10 +1,10 @@
 from cipher import ALPHABET
 
 
-class AtbashCipher():
+class AtbashCipher:
     def __init__(self):
         self.alphabet = ALPHABET
-   
+
     def __call__(self, text: str) -> str:
         return self.encrypt_decrypt_text(text)
 
@@ -27,8 +27,10 @@ class AtbashCipher():
         text = text.upper()
         output_text = []
         for letter in text:
-            letter_index = self.alphabet.index(letter) 
-            output_index = ((alphabet_len - 1) * letter_index + (alphabet_len - 1)) % alphabet_len
+            letter_index = self.alphabet.index(letter)
+            output_index = (
+                (alphabet_len - 1) * letter_index + (alphabet_len - 1)
+            ) % alphabet_len
             output_letter = self.alphabet[output_index]
             output_text.append(output_letter)
         return "".join(output_text)
