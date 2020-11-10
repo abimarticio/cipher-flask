@@ -24,10 +24,10 @@ class CaesarCipher:
         """
         alphabet_len = len(self.alphabet)
         text = text.upper()
-        output_text = []
+        encrypted_text = []
         for letter in text:
             letter_index = self.alphabet.index(letter)
             output_index = (letter_index + key) % alphabet_len
             output_letter = self.alphabet[output_index]
-            output_text.append(output_letter)
-        return "".join(output_text)
+            encrypted_text.append(output_letter)
+        return "".join(encrypted_text)
