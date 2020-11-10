@@ -27,10 +27,7 @@ class CaesarCipher:
         output_text = []
         for letter in text:
             letter_index = self.alphabet.index(letter)
-            if mode == "encrypt":
-                output_index = (letter_index + key) % alphabet_len
-            elif mode == "decrypt":
-                output_index = (letter_index - key) % alphabet_len
+            output_index = (letter_index + key) % alphabet_len
             output_letter = self.alphabet[output_index]
             output_text.append(output_letter)
         return "".join(output_text)
