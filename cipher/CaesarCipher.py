@@ -5,7 +5,7 @@ class CaesarCipher:
     def __init__(self):
         self.alphabet = ALPHABET
 
-    def encrypt_text(self, text: str, mode: str = "encrypt", key: int = 1) -> str:
+    def encrypt_text(self, text: str, key: int) -> str:
         """
         Returns the output of using Caesar cipher
 
