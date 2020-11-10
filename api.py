@@ -22,19 +22,19 @@ def atbash_decrypt():
 @app.route("/caesar/encrypt", methods=["GET"])
 def caesar_encrypt():
     text = request.args.get("text", default=None)
-    mode = request.args.get("mode", default="encrypt")
     key = request.args.get("key", default=None, type=int)
-    encrypted_text = CaesarCipher()
-    return f"text: {text} - encrypted text: {encrypted_text(text, mode, key)}"
+    Caesar = CaesarCipher()
+    encrypted_text = Caesar.encrypt_text(text, key)
+    return f"text: {text} - encrypted text: {encrypted_text}"
 
 
 @app.route("/caesar/decrypt", methods=["GET"])
 def caesar_decrypt():
     text = request.args.get("text", default=None)
-    mode = request.args.get("mode", default="decrypt")
     key = request.args.get("key", default=None, type=int)
-    decrypted_text = CaesarCipher()
-    return f"text: {text} - decrypted text: {decrypted_text(text, mode, key)}"
+    Caesar = CaesarCipher()
+    decrypted_text = Caesar.decrypt_text(text, key)
+    return f"text: {text} - decrypted text: {decrypted_text}"
 
 
 if __name__ == "__main__":
