@@ -33,6 +33,22 @@ class CaesarCipher:
         return "".join(encrypted_text)
 
     def decrypt_text(self, text: str, key: int) -> str:
+        """
+        Returns the decrypted text using Caesar cipher
+
+        Parameters
+        ----------
+        text: str
+            The encrypted text to decrypt.
+        key: int
+            The cipher key to use.
+
+        Returns
+        -------
+        str
+            The decrypted text.
+
+        """
         alphabet_len = len(self.alphabet)
         text = text.upper()
         decrypted_text = []
