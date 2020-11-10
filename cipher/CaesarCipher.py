@@ -7,21 +7,19 @@ class CaesarCipher:
 
     def encrypt_text(self, text: str, key: int) -> str:
         """
-        Returns the output of using Caesar cipher
+        Returns the encrypted text using Caesar cipher
 
         Parameters
         ----------
         text: str
-            The input text.
-        mode: str
-            The mode of Caesar cipher, whether 'encrypt or decrypt'.
+            The input text to encrypt.
         key: int
             The cipher key to use.
 
         Returns
         -------
         str
-            The Caesar cipher output.
+            The encrypted text.
 
         """
         alphabet_len = len(self.alphabet)
