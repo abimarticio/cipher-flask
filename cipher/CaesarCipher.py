@@ -5,9 +5,6 @@ class CaesarCipher:
     def __init__(self):
         self.alphabet = ALPHABET
 
-    def __call__(self, text: str, mode: str, key: int) -> str:
-        return self.encrypt_decrypt_text(text, mode, key)
-
     def encrypt_decrypt_text(
         self, text: str, mode: str = "encrypt", key: int = 1
     ) -> str:
