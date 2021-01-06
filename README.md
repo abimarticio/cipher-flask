@@ -32,6 +32,11 @@ $ export FLASK_APP=api.py
 $ python -m flask run
 ```
 
+or simply use python command
+```
+$ python api.py
+```
+
 And head over to 
 ```
 http//127.0.0.1:5000/atbash/encrypt?text=hello
