@@ -41,3 +41,8 @@ And head over to
 ```
 http//127.0.0.1:5000/atbash/encrypt?text=hello
 ```
+
+We can also test out our API using curl command
+```
+$ curl http://localhost:5000/atbash/encrypt?text=hello
+```
