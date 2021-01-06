@@ -28,8 +28,8 @@ $ flask run
 
 We can also use python -m flask
 ```
-export FLASK_APP=api.py
-python -m flask run
+$ export FLASK_APP=api.py
+$ python -m flask run
 ```
 
 And head over to 
