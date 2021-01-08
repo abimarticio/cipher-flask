@@ -22,6 +22,19 @@ app = Flask(__name__)
 
 @app.route("/atbash/encrypt", methods=["GET"])
 def atbash_encrypt():
+    """
+    GET request for Atbash Encrypt.
+
+    Request Parameters
+    ----------
+    text: str
+        The input text.
+
+    Returns
+    -------
+    str
+        The Atbash cipher output.
+    """
     text = request.args.get("text", default=None)
     encrypted_text = AtbashCipher()
     return f"text: {text} - encrypted text: {encrypted_text(text)}"
