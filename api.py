@@ -84,6 +84,19 @@ def caesar_encrypt():
 
 @app.route("/caesar/decrypt", methods=["GET"])
 def caesar_decrypt():
+    """
+    GET request for Caesar Decrypt.
+
+    Request Parameters
+    ----------
+    text: str
+        The input text.
+
+    Returns
+    -------
+    str
+        The Caesar cipher output.
+    """
     text = request.args.get("text", default=None)
     key = request.args.get("key", default=None, type=int)
     Caesar = CaesarCipher()
