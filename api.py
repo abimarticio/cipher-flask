@@ -42,6 +42,19 @@ def atbash_encrypt():
 
 @app.route("/atbash/decrypt", methods=["GET"])
 def atbash_decrypt():
+    """
+    GET request for Atbash Decrypt.
+
+    Request Parameters
+    ----------
+    text: str
+        The input text.
+
+    Returns
+    -------
+    str
+        The Atbash cipher output.
+    """
     text = request.args.get("text", default=None)
     decrypted_text = AtbashCipher()
     return f"text: {text} - decrypted text: {decrypted_text(text)}"
