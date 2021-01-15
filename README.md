@@ -45,6 +45,13 @@ http//127.0.0.1:5000/atbash/encrypt?text=hello
 We can also test out our API using curl command
 ```
 $ curl http://localhost:5000/atbash/encrypt?text=hello
+SVOOL
+$ curl http://localhost:5000/atbash/decrypt?text=svool
+HELLO
+$ curl http://localhost:5000/caesar/encrypt?text=hello&key=2
+JGNNQ
+$ curl http://localhost:5000/caesar/decrypt?text=jgnnq&key=2
+HELLO
 ```
 
 ## License
